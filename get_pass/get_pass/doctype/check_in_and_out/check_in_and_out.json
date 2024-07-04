@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:serial_number",
+ "creation": "2022-11-25 12:48:39.445546",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "serial_number",
+  "appointment",
+  "section_break_2",
+  "first_name",
+  "full_name",
+  "column_break_5",
+  "middle_name",
+  "column_break_7",
+  "last_name",
+  "section_break_9",
+  "gender",
+  "mobile_number",
+  "email",
+  "status",
+  "gate",
+  "column_break_14",
+  "type_of_automobile",
+  "automobile_number",
+  "purpose",
+  "date_and_time",
+  "date_and_time_for_check_in",
+  "image"
+ ],
+ "fields": [
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number",
+   "unique": 1
+  },
+  {
+   "fetch_from": "appointment.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fetch_from": "appointment.middle_name",
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fetch_from": "appointment.last_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fetch_from": "appointment.contact_number",
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number",
+   "options": "Phone"
+  },
+  {
+   "fetch_from": "appointment.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fetch_from": "appointment.gender",
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nOthers"
+  },
+  {
+   "fieldname": "type_of_automobile",
+   "fieldtype": "Select",
+   "label": "Type Of Vehicle",
+   "options": "Car\nBike\nTruck"
+  },
+  {
+   "fieldname": "automobile_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Number"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Small Text",
+   "label": "Purpose"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Date And Time for checkin",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Check-In\nCheck-Out"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "appointment.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gate",
+   "fieldtype": "Select",
+   "label": "Gate",
+   "options": "A1\nA2\nA3"
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "label": "Appointment",
+   "options": "Appointment Generator"
+  },
+  {
+   "fieldname": "date_and_time_for_check_in",
+   "fieldtype": "Datetime",
+   "label": "Date and time for checkout"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  }
+ ],
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-28 13:03:53.341590",
+ "modified_by": "Administrator",
+ "module": "Get Pass",
+ "name": "Check In and Out",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "custom": 1,
+   "title": "Check-In"
+  },
+  {
+   "color": "Red",
+   "custom": 1,
+   "title": "Check-Out"
+  }
+ ],
+ "track_changes": 1
+}

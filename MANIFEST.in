@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include get_pass *.css
+recursive-include get_pass *.csv
+recursive-include get_pass *.html
+recursive-include get_pass *.ico
+recursive-include get_pass *.js
+recursive-include get_pass *.json
+recursive-include get_pass *.md
+recursive-include get_pass *.png
+recursive-include get_pass *.py
+recursive-include get_pass *.svg
+recursive-include get_pass *.txt
+recursive-exclude get_pass *.pyc
